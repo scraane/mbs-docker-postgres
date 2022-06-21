@@ -1,8 +1,4 @@
-- tags: always
-  connection: local
-  become: true
-
-  pre-tasks:
+- pre-tasks:
 
     - name: docker | create postgres directory if it does not exist
       file:
