@@ -10,15 +10,15 @@
       file:
         path: /docker_data/postgres
         state: directory
-        mode: '0755'
-        owner: ansible.cron
+        owner: root
         group: docker
+        mode: '0755'
 
     - name: docker | copy postgres compose script
       copy:
         src: files/postgres.yml
         dest: /docker_data/postgres/docker-compose.yml
-        owner: ansible.cron
+        owner: root
         group: docker
         mode: '0755'
         
