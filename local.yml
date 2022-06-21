@@ -20,7 +20,7 @@
         dest: /docker_data/postgres/docker-compose.yml
         owner: ansible.cron
         group: docker
-        mode: 0755
+        mode: '0755'
         
     - name: docker | deploy postgres
       docker_compose:
