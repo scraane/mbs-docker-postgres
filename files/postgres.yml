@@ -4,6 +4,8 @@ services:
   postgresql:
     image: postgres:14
     container_name: postgres
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
     volumes:
       - /docker_data/postgres/data:/var/lib/postgresql/data
     restart: always
