@@ -3,7 +3,7 @@
   connection: local
   become: true
 
-tasks:
+pre-tasks:
   - name: docker | create postgres directory if it does not exist
     file:
       path: /docker_data/postgres
