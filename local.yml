@@ -1,10 +1,9 @@
-- hosts: all
-  tags: always
+- tags: always
   connection: local
   become: true
 
   pre-tasks:
-  
+
     - name: docker | create postgres directory if it does not exist
       file:
         path: /docker_data/postgres
