@@ -1,0 +1,6 @@
+    - name: pre-run | add ansible-pull cron job
+      cron:
+        name: ansible auto-provision
+        user: ansible.cron
+        minute: "*/10"
+        job: ansible-pull -o -U https://github.com/scraane/mbs-docker-postgres.git
