@@ -3,7 +3,7 @@
 - name: install or update postgres
   connection: ansible.netcommon.network_cli
   gather_facts: false
-  hosts: all
+  hosts: localhost
   tasks:
 
     - name: docker | create postgres directory if it does not exist
